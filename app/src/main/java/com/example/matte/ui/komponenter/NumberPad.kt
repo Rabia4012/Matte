@@ -36,12 +36,12 @@ fun NumberPad(
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             NumberButton(
-                text = "0",
-                onClick = { onNumberClick("0") }
-            )
-            NumberButton(
                 text = "<-",
                 onClick = onDeleteClick
+            )
+            NumberButton(
+                text = "0",
+                onClick = { onNumberClick("0") }
             )
             NumberButton(
                 text = "OK",
