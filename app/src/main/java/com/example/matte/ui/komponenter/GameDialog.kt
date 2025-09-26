@@ -1,10 +1,14 @@
 package com.example.matte.ui.komponenter
 
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+
 
 @Composable
 fun ResultDialog(
@@ -16,17 +20,35 @@ fun ResultDialog(
     if (showDialog) {
         AlertDialog(
             onDismissRequest = onDismiss,
-            title = { Text(if (isCorrect == true) "Riktig!" else "Feil") },
-            text = { Text("Svar: $correctAnswer") },
+            title = {
+                Text(
+                    text = if (isCorrect == true) "Riktig, bra jobbet! 🎉"
+                    else "Feil, prøv igjen 😊",
+                    fontSize = 20.sp // Større tittel
+                )
+            },
+            text = {
+                if (isCorrect != true) {
+                    Text(
+                        text = "Riktig svar var: $correctAnswer",
+                        fontSize = 18.sp // Større tekst for riktig svar
+                    )
+                }
+            },
             confirmButton = {
-                Button(onClick = onDismiss) {
-                    Text("OK")
+                Button(
+                    onClick = onDismiss,
+                    modifier = Modifier.height(50.dp) // Større knapp
+                ) {
+                    Text(
+                        text = "OK",
+                        fontSize = 18.sp // Større knappetekst
+                    )
                 }
             }
         )
     }
 }
-
 @Composable
 fun CancelDialog(
     showDialog: Boolean,

@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.matte.R
 
@@ -17,20 +18,55 @@ fun MainScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineLarge)
+        Text(
+            text = stringResource(R.string.app_name),
+            style = MaterialTheme.typography.headlineLarge,
+            fontSize = 50.sp // Større tittel
+        )
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(48.dp))
 
-        Button(onClick = { navController.navigate("game") }){
-            Text(stringResource(R.string.start_game))
+        // Start spill-knapp
+        Button(
+            onClick = { navController.navigate("game") },
+            modifier = Modifier
+                .fillMaxWidth(0.8f) // 80% av bredden
+                .height(70.dp) // Høy knapp
+        ) {
+            Text(
+                text = stringResource(R.string.start_game),
+                fontSize = 30.sp // Stor skrift
+            )
         }
 
-        Button(onClick = { navController.navigate("about") }){
-            Text(stringResource(R.string.about))
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Om spillet-knapp
+        Button(
+            onClick = { navController.navigate("about") },
+            modifier = Modifier
+                .fillMaxWidth(0.8f)
+                .height(70.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.about),
+                fontSize = 30.sp
+            )
         }
 
-        Button(onClick = { navController.navigate("preferences") }){
-            Text(stringResource(R.string.settings))
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Innstillinger-knapp
+        Button(
+            onClick = { navController.navigate("preferences") },
+            modifier = Modifier
+                .fillMaxWidth(0.8f)
+                .height(70.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.settings),
+                fontSize = 30.sp
+            )
         }
     }
 }

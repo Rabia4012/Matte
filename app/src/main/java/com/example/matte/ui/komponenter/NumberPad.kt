@@ -15,7 +15,10 @@ fun NumberPad(
     Column(modifier = modifier) {
         // Rad 1-3
         for (i in 0..2) {
-            Row {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
                 for (j in 1..3) {
                     val number = (i * 3 + j).toString()
                     NumberButton(
@@ -24,21 +27,24 @@ fun NumberPad(
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(12.dp)) // Bare én Spacer per rad
         }
 
         // Siste rad
-        Row {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
             NumberButton(
                 text = "0",
                 onClick = { onNumberClick("0") }
             )
             NumberButton(
-                text = "Slett",
+                text = "<-",
                 onClick = onDeleteClick
             )
             NumberButton(
-                text = "Svar",
+                text = "OK",
                 onClick = onSubmitClick
             )
         }
