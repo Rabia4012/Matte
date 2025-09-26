@@ -1,6 +1,10 @@
 package com.example.matte.ui.komponenter
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -27,7 +31,7 @@ fun NumberPad(
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(12.dp)) // Bare én Spacer per rad
+            Spacer(modifier = Modifier.height(12.dp))
         }
 
         // Siste rad
@@ -35,14 +39,25 @@ fun NumberPad(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            NumberButton(
-                text = "<-",
-                onClick = onDeleteClick
-            )
+
+            // Slett-knapp med ikon
+            Button(
+                onClick = onDeleteClick,
+                modifier = Modifier
+                    .padding(4.dp)
+                    .size(80.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = "Slett"
+                )
+            }
+
             NumberButton(
                 text = "0",
                 onClick = { onNumberClick("0") }
             )
+
             NumberButton(
                 text = "OK",
                 onClick = onSubmitClick
