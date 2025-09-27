@@ -8,7 +8,9 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.matte.R
 
 @Composable
 fun NumberPad(
@@ -60,7 +62,7 @@ fun NumberPad(
             )
 
             NumberButton(
-                text = "OK",
+                text = stringResource(R.string.OK),
                 onClick = onSubmitClick
             )
         }

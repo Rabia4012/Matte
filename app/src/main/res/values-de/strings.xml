@@ -1,0 +1,58 @@
+<resources>
+    <!-- Eksisterende strings på tysk -->
+    <string name="app_name">Mathe-Spiel✏️📚</string>
+    <string name="intro">Lernen Sie Addition auf eine lustige Weise!</string>
+    <string name="start_game">Spiel starten🎮</string>
+    <string name="about">Über das Spiel🧮</string>
+    <string name="exit">Spiel beenden?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="empty">Entschuldigung, keine weiteren Aufgaben!</string>
+    <string name="correct">Richtige Antwort, herzlichen Glückwunsch!</string>
+    <string name="wrong">Falsche Antwort, versuchen Sie es noch einmal!</string>
+    <string name="settings">Einstellungen⚙️</string>
+    <string name="number_of_questions">Anzahl der Aufgaben</string>
+    <string name="OK">Antwort</string>
+    <string name="delete">Löschen</string>
+    <string name="back">Zurück</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="quit">Sind Sie sicher, dass Sie das Spiel beenden möchten?</string>
+    <string name="learn_addition">Lernen Sie auf eine lustige Weise zu addieren😊</string>
+
+    <!-- Nye morsomme strings for AboutScreen på tysk -->
+    <string name="about_app_title">Hallo, das ist unser Mathe-Abenteuer! 🎪</string>
+    <string name="about_app_description">Dies ist die coolste Art, Addition zu lernen! 🚀 Unsere App ist voller Farben, lustiger Zahlen und guter Vibes. Sie wurde speziell für Superhelden wie dich gemacht, die Mathe-Meister werden wollen! 🦸‍♂️🦸‍♀️</string>
+    <string name="how_to_play_title">So wirst du ein Mathe-Meister: 🏆</string>
+    <string name="how_to_play_steps">1. Tippe auf \'Spiel starten\', um den Spaß zu beginnen! 🎮\n2. Schau dir die lustige Rechenaufgabe an! 🎭\n3. Tippe auf die runden blauen Zahlenknöpfe, um zu antworten! 🔢\n4. Oops, falsch? Tippe auf den Zurück-Knopf! 🗑️\n5. Hol dir ein High-Five oder eine Ermutigung! ✨</string>
+    <string name="features_title">All die coolen Dinge, die du tun kannst: 🌈</string>
+    <string name="features_list">• 15 super lustige Additionsaufgaben! 🎯\n• Wähle, ob du 5, 10 oder 15 Aufgaben möchtest! 📊\n• Extra große Knöpfe für Superfinger! 👆\n• Viele positive Nachrichten und Freude! 😄</string>
+    <string name="back_button">Zurück zum Hauptmenü</string>
+
+    <!-- Nye strings for GameScreen og dialoger på tysk -->
+    <string name="game_completed">Spiel abgeschlossen! 🎉</string>
+    <string name="game_completed_message">Herzlichen Glückwunsch! Sie haben alle Aufgaben abgeschlossen!</string>
+    <string name="continue_button">Weiter</string>
+    <string name="confirm_quit">Spiel beenden?</string>
+    <string name="quit_message">Sind Sie sicher, dass Sie das Spiel beenden möchten? Ihr Fortschritt wird gespeichert.</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="cancel">Abbrechen</string>
+
+    <!-- Nye strings for PreferencesScreen på tysk -->
+    <string name="tips_title">💡 Tipps</string>
+    <string name="tips_description">Wählen Sie die Anzahl der Aufgaben, die am besten für das Kind geeignet ist. Beginnen Sie mit weniger Aufgaben und erhöhen Sie sie allmählich, wenn es besser wird!</string>
+    <string name="current_selection">Aktuelle Auswahl</string>
+    <string name="questions_per_game">%d Aufgaben pro Spiel</string>
+    <string name="questions_suffix">Aufgaben</string>
+
+    <!-- Ekstra strings som trengs for ResultDialog på tysk -->
+    <string name="correct_answer_was">Richtige Antwort war %s</string>
+    <string name="fun_fact_title">💡 Wussten Sie?</string>
+    <string name="fun_fact_text">Mathe ist wie eine Superkraft! Je mehr du übst, desto besser wirst du! 💪 Denken Sie daran, dass alle großen Mathe-Genies genau wie Sie angefangen haben. Sie machen einen fantastischen Job! 🌟</string>
+
+
+    <!-- Språkvalg på tysk -->
+    <string name="language_settings">Spracheinstellungen 🌍</string>
+    <string name="select_language">Wählen Sie die Sprache für das Spiel!</string>
+    <string name="language_norwegian">Norwegisch 🇳🇴</string>
+    <string name="language_german">Deutsch 🇩🇪</string>
+</resources>

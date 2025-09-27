@@ -5,10 +5,11 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-
+import androidx.compose.ui.unit.sp
+import com.example.matte.R
 
 @Composable
 fun ResultDialog(
@@ -17,38 +18,40 @@ fun ResultDialog(
     correctAnswer: String,
     onDismiss: () -> Unit
 ) {
+
     if (showDialog) {
         AlertDialog(
             onDismissRequest = onDismiss,
             title = {
                 Text(
-                    text = if (isCorrect == true) "Riktig, bra jobbet! 🎉"
-                    else "Feil, prøv igjen 😊",
-                    fontSize = 20.sp // Større tittel
+                    text = if (isCorrect == true) stringResource(R.string.correct)
+                    else stringResource(R.string.wrong),
+                    fontSize = 20.sp
                 )
             },
             text = {
                 if (isCorrect != true) {
                     Text(
-                        text = "Riktig svar var: $correctAnswer",
-                        fontSize = 18.sp // Større tekst for riktig svar
+                        text = stringResource(R.string.correct_answer_was, correctAnswer),
+                        fontSize = 18.sp
                     )
                 }
             },
             confirmButton = {
                 Button(
                     onClick = onDismiss,
-                    modifier = Modifier.height(50.dp) // Større knapp
+                    modifier = Modifier.height(50.dp)
                 ) {
                     Text(
-                        text = "OK",
-                        fontSize = 18.sp // Større knappetekst
+                        text = stringResource(R.string.OK),
+                        fontSize = 18.sp
                     )
                 }
             }
         )
     }
 }
+
 @Composable
 fun CancelDialog(
     showDialog: Boolean,
@@ -58,16 +61,16 @@ fun CancelDialog(
     if (showDialog) {
         AlertDialog(
             onDismissRequest = onDismiss,
-            title = { Text("Avbryt spillet?") },
-            text = { Text("Vil du avbryte spillet?") },
+            title = { Text(stringResource(R.string.confirm_quit)) },
+            text = { Text(stringResource(R.string.quit_message)) },
             confirmButton = {
                 Button(onClick = onConfirm) {
-                    Text("Ja")
+                    Text(stringResource(R.string.yes))
                 }
             },
             dismissButton = {
                 Button(onClick = onDismiss) {
-                    Text("Nei")
+                    Text(stringResource(R.string.no))
                 }
             }
         )
@@ -82,11 +85,11 @@ fun GameCompletedDialog(
     if (showDialog) {
         AlertDialog(
             onDismissRequest = { },
-            title = { Text("Ferdig!") },
-            text = { Text("Du har fullført spillet!") },
+            title = { Text(stringResource(R.string.game_completed)) },
+            text = { Text(stringResource(R.string.game_completed_message)) },
             confirmButton = {
                 Button(onClick = onConfirm) {
-                    Text("OK")
+                    Text(stringResource(R.string.OK))
                 }
             }
         )

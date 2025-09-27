@@ -13,60 +13,63 @@ import com.example.matte.R
 
 @Composable
 fun MainScreen(navController: NavController) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.headlineLarge,
-            fontSize = 50.sp // Større tittel
-        )
-
-        Spacer(modifier = Modifier.height(48.dp))
-
-        // Start spill-knapp
-        Button(
-            onClick = { navController.navigate("game") },
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        Column(
             modifier = Modifier
-                .fillMaxWidth(0.8f) // 80% av bredden
-                .height(70.dp) // Høy knapp
+                .padding(innerPadding)
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = stringResource(R.string.start_game),
-                fontSize = 30.sp // Stor skrift
+                text = stringResource(R.string.app_name),
+                style = MaterialTheme.typography.headlineLarge,
+                fontSize = 50.sp
             )
-        }
 
-        Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(48.dp))
 
-        // Om spillet-knapp
-        Button(
-            onClick = { navController.navigate("about") },
-            modifier = Modifier
-                .fillMaxWidth(0.8f)
-                .height(70.dp)
-        ) {
-            Text(
-                text = stringResource(R.string.about),
-                fontSize = 30.sp
-            )
-        }
+            Button(
+                onClick = { navController.navigate("game") },
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .height(70.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.start_game),
+                    fontSize = 30.sp
+                )
+            }
 
-        Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
-        // Innstillinger-knapp
-        Button(
-            onClick = { navController.navigate("preferences") },
-            modifier = Modifier
-                .fillMaxWidth(0.8f)
-                .height(70.dp)
-        ) {
-            Text(
-                text = stringResource(R.string.settings),
-                fontSize = 30.sp
-            )
+            Button(
+                onClick = { navController.navigate("about") },
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .height(70.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.about),
+                    fontSize = 30.sp
+                )
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Button(
+                onClick = { navController.navigate("preferences") },
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .height(70.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.settings),
+                    fontSize = 30.sp
+                )
+            }
         }
     }
 }

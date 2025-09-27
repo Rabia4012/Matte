@@ -1,20 +1,58 @@
 <resources>
-    <string name="app_name">Mattespill✏️📚</string>
+    <!-- Eksisterende strings -->
+    <string name="app_name">Mattespill ✏️📚</string>
     <string name="intro">Lær addisjon på en morsom måte!</string>
-    <string name="start_game">Start spill🎮</string>
-    <string name="about">Om spillet🧮</string>
-    <string name="exit">Avslutt spillet?</string>2
-    <string name="yes">Ja</string>
-    <string name="no">Nei</string>
+    <string name="start_game">Start spill 🎮</string>
+    <string name="about">Om spillet 🧮</string>
+    <string name="exit">Avslutt spillet?❌</string>
+    <string name="yes">JA</string>
+    <string name="no">NEI</string>
     <string name="empty">Beklager, ingen flere oppgaver!</string>
-    <string name="correct">Riktig svar, gratulerer!</string>
-    <string name="wrong">Feil svar, prøv igjen!</string>
-    <string name="settings">Innstillinger⚙️</string>
-    <string name="number_of_questions">Antall oppgaver</string>
-    <string name="OK">Svar</string>
+    <string name="correct">YAY riktig svar! 🎉</string>
+    <string name="wrong">Ånei feil svar, men det går bra- prøv igjen! 🤗</string>
+    <string name="settings">Preferanser ⚙️</string>
+    <string name="number_of_questions">Antall oppgaver 📝</string>
+    <string name="OK">OK</string>
     <string name="delete">Slett</string>
     <string name="back">Tilbake</string>
     <string name="settings_title">Innstillinger</string>
-    <string name="quit">Er du sikker på at du vil avslutte?</string>
-    <string name="learn_addition">Lær deg å plusse på en morsom måte😊</string>
+    <string name="quit">Er du sikker på at vil avslutte spillet?</string>
+    <string name="learn_addition">VELKOMMEN!🎪</string>
+
+    <!-- Nye morsomme strings for AboutScreen -->
+    <string name="about_app_title">Mattespillet vårt er beste måten å lære addisjon på! </string>
+    <string name="about_app_description">Den er laget spesielt for superhelter som deg, som vil bli mestere i matte! 🦸‍♂️✨️</string>
+    <string name="how_to_play_title">Slik blir du en matte-mester: 🏆</string>
+    <string name="how_to_play_steps">1. Trykk på \'Start spill\' for å begynne!🎮\n2. Se på regnestykket!\n3. Trykk på de runde blå tallknappene for å svare! 🔢\n4. Oops, feil? Trykk på tilbake-knappen! 🗑️\n5. Deretter blir du mattemester! ✨</string>
+    <string name="features_title">Det du kan gjøre:📝</string>
+    <string name="features_list">Velg om du vil ha 5, 10 eller 15 oppgaver under preferanser! 📊\nDeretter starter du🤗</string>
+    <string name="back_button">Tilbake til hovedmenyen</string>
+
+    <!-- Nye strings for GameScreen og dialoger -->
+    <string name="game_completed">Spill fullført! 🎉</string>
+    <string name="game_completed_message">Gratulerer!🎉Du har fullført alle oppgavene, det er ikke flere spørsmål igjen!</string>
+    <string name="continue_button">Fortsett</string>
+    <string name="confirm_quit">Avslutt spillet?</string>
+    <string name="quit_message">Er du sikker på at du vil avslutte spillet? Fremgangen din vil bli lagret.</string>
+    <string name="confirm">Bekreft</string>
+    <string name="cancel">Avbryt</string>
+
+    <!-- Nye strings for PreferencesScreen -->
+    <string name="tips_title">💡 Tips</string>
+    <string name="tips_description">Velg antall oppgaver som passer best for barnet. Start med færre oppgaver og øk gradvis når de blir bedre!</string>
+    <string name="current_selection">Nåværende valg</string>
+    <string name="questions_per_game">%d oppgaver per spill</string>
+    <string name="questions_suffix">oppgaver</string>
+
+    <!-- Ekstra strings som trengs for ResultDialog -->
+    <string name="correct_answer_was">Riktig svar var %s</string>
+    <string name="fun_fact_title">💡 Visste du?</string>
+    <string name="fun_fact_text">Øvelse gjør mester! Jo mer du øver, jo bedre blir du! 💪 Husk at alle store matte-mestere startet akkurat som deg. Du gjør en herlig jobb! 👏</string>
+
+    <!-- Legg til disse i strings.xml (fjern translatable="false") -->
+    <string name="language_settings" translatable="false">Språkvalg 🌍</string>
+    <string name="select_language" translatable="false">Velg språket du vil ha i spillet!</string>
+    <string name="language_norwegian">Norsk 🇳🇴</string>
+    <string name="language_german">Tysk 🇩🇪</string>
+
 </resources>

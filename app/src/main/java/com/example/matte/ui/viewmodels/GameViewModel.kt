@@ -1,8 +1,10 @@
+
 package com.example.matte.ui.viewmodels
 
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.application
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,8 +23,8 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
             .getSharedPreferences("game_prefs", Context.MODE_PRIVATE)
         val gameLength = sharedPreferences.getInt("game_length", 5)
 
-        val allQuestions = getApplication<Application>().resources.getStringArray(R.array.questions).toList()
-        val allAnswers = getApplication<Application>().resources.getStringArray(R.array.answers).toList()
+        val allQuestions = application.resources.getStringArray(R.array.questions).toList()
+        val allAnswers = application.resources.getStringArray(R.array.answers).toList()
 
         // Velg tilfeldige spørsmål basert på valgt antall
         val randomIndices = allQuestions.indices.shuffled().take(gameLength)

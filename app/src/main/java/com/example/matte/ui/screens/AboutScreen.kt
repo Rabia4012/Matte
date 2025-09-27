@@ -26,7 +26,10 @@ fun AboutScreen(navController: NavController) {
                 },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(
+                            Icons.Default.ArrowBack,
+                            contentDescription = stringResource(R.string.back_button)
+                        )
                     }
                 }
             )
@@ -65,12 +68,12 @@ fun AboutScreen(navController: NavController) {
                     modifier = Modifier.padding(16.dp)
                 ) {
                     Text(
-                        text = "Om appen",
+                        text = stringResource(R.string.about_app_title),
                         style = MaterialTheme.typography.headlineSmall,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
                     Text(
-                        text = "Denne appen er laget for å hjelpe barn med å lære grunnleggende addisjon på en morsom og engasjerende måte. Appen er designet spesielt for små barn med store knapper og fargerikt design.",
+                        text = stringResource(R.string.about_app_description),
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }
@@ -87,16 +90,12 @@ fun AboutScreen(navController: NavController) {
                     modifier = Modifier.padding(16.dp)
                 ) {
                     Text(
-                        text = "Slik spiller du:",
+                        text = stringResource(R.string.how_to_play_title),
                         style = MaterialTheme.typography.headlineSmall,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
                     Text(
-                        text = "1. Trykk på 'Start spill'\n" +
-                                "2. Se på regnestykkene som vises\n" +
-                                "3. Bruk tallknappene til å skrive svaret\n" +
-                                "4. Trykk på sletteknappen hvis du vil endre svaret\n" +
-                                "5. Appen gir deg tilbakemelding på om svaret er riktig",
+                        text = stringResource(R.string.how_to_play_steps),
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }
@@ -113,16 +112,12 @@ fun AboutScreen(navController: NavController) {
                     modifier = Modifier.padding(16.dp)
                 ) {
                     Text(
-                        text = "Funksjoner:",
+                        text = stringResource(R.string.features_title),
                         style = MaterialTheme.typography.headlineSmall,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
                     Text(
-                        text = "• 15 forskjellige addisjonsoppgaver\n" +
-                                "• Tilpasset antall oppgaver per spill\n" +
-                                "• Tilfeldige oppgaver hver gang\n" +
-                                "• Barnevennlig design\n" +
-                                "• Positive tilbakemeldinger",
+                        text = stringResource(R.string.features_list),
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }
@@ -130,30 +125,6 @@ fun AboutScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Fun fact for kids
-            Surface(
-                modifier = Modifier.fillMaxWidth(),
-                color = MaterialTheme.colorScheme.primaryContainer,
-                shape = MaterialTheme.shapes.medium
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = "💡 Did you know?",
-                        style = MaterialTheme.typography.headlineSmall,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                    Text(
-                        text = "Addisjon er en av de viktigste matematikkferdighetene! Jo mer du øver, jo bedre blir du! 🎉",
-                        style = MaterialTheme.typography.bodyMedium,
-                        textAlign = TextAlign.Center,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer,
-                        modifier = Modifier.padding(top = 8.dp)
-                    )
-                }
-            }
         }
     }
 }
